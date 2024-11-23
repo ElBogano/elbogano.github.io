@@ -38,15 +38,18 @@
 
     <!-- External JavaScript -->
     <script>
-      // Create a new Audio object
-      const audio = new Audio("https://github.com/ElBogano/elbogano.github.io/raw/refs/heads/main/holiday_road.mp3");
+      // Wait for the DOM to fully load
+      document.addEventListener("DOMContentLoaded", () => {
+        // Create a new Audio object
+        const audio = new Audio("https://github.com/ElBogano/elbogano.github.io/raw/refs/heads/main/holiday_road.mp3");
 
-      // Set the audio to loop
-      audio.loop = true;
+        // Set the audio to loop
+        audio.loop = true;
 
-      // Attempt to autoplay the audio
-      audio.play().catch((error) => {
-        console.error("Autoplay failed:", error);
+        // Attempt to play the audio
+        audio.play().catch((error) => {
+          console.error("Autoplay failed:", error);
+        });
       });
     </script>
     <script src="script.js"></script>
