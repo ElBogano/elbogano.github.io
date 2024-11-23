@@ -62,6 +62,23 @@ p {
   margin-top: 20px;
 }
 
+#play-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #2D8D3C;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#play-button:hover {
+  background-color: white;
+  color: #2D8D3C;
+}
+
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
   h1 {
