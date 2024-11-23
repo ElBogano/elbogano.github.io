@@ -3,9 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Road Trip Countdown</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>hello world</h1>
+    <!-- Autoplay background music -->
+    <audio autoplay loop>
+      <source src="holiday_road.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Main content container -->
+    <div id="content">
+      <!-- Heading -->
+      <h1><strong>United States</strong><br />Road Trip Countdown</h1>
+
+      <!-- Countdown Timer -->
+      <div id="countdown">
+        <div>
+          <span id="days">00</span>
+          <span>Days</span>
+        </div>
+        <div>
+          <span id="hours">00</span>
+          <span>Hours</span>
+        </div>
+        <div>
+          <span id="minutes">00</span>
+          <span>Minutes</span>
+        </div>
+        <div>
+          <span id="seconds">00</span>
+          <span>Seconds</span>
+        </div>
+      </div>
+
+      <!-- Footer text -->
+      <p>Merry Christmas and a Happy Road Trip</p>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>

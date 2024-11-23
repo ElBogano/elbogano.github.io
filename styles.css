@@ -1,0 +1,87 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #2d8d3c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Center content container */
+#content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+  font-size: 2.5rem; /* Largest size for the main heading */
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Countdown container styling */
+#countdown {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+
+#countdown div {
+  display: flex;
+  flex-direction: column; /* Stack number and label */
+  align-items: center; /* Center both number and label */
+}
+
+/* Styling for the numbers */
+#countdown div span:first-child {
+  font-size: 3.5rem; /* Larger font for numbers */
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* Styling for the labels */
+#countdown div span:last-child {
+  font-size: 1rem; /* Smaller size for labels */
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 0.1rem; /* Slight spacing for elegance */
+}
+
+/* Footer text styling */
+p {
+  font-size: 1.2rem; /* Moderate size for footer text */
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #countdown {
+    flex-direction: column;
+    gap: 15px; /* Add space between items */
+  }
+
+  #countdown div span:first-child {
+    font-size: 2.8rem;
+  }
+
+  #countdown div span:last-child {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
