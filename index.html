@@ -32,24 +32,28 @@
         </div>
       </div>
 
+      <!-- Play button for music -->
+      <button id="play-button">Play Music</button>
+
       <!-- Footer text -->
       <p>Merry Christmas and a Happy Road Trip</p>
     </div>
 
     <!-- External JavaScript -->
     <script>
-      // Wait for the DOM to fully load
-      document.addEventListener("DOMContentLoaded", () => {
-        // Create a new Audio object
-        const audio = new Audio("https://github.com/ElBogano/elbogano.github.io/raw/refs/heads/main/holiday_road.mp3");
+      // Select the play button
+      const playButton = document.getElementById("play-button");
 
-        // Set the audio to loop
-        audio.loop = true;
+      // Create a new Audio object
+      const audio = new Audio("https://github.com/ElBogano/elbogano.github.io/raw/refs/heads/main/holiday_road.mp3");
+      audio.loop = true;
 
-        // Attempt to play the audio
+      // Play audio when the button is clicked
+      playButton.addEventListener("click", () => {
         audio.play().catch((error) => {
-          console.error("Autoplay failed:", error);
+          console.error("Error playing audio:", error);
         });
+        playButton.style.display = "none"; // Hide the button after playing
       });
     </script>
     <script src="script.js"></script>
