@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Autoplay background music -->
-    <audio autoplay loop>
-      <source src="https://github.com/ElBogano/elbogano.github.io/raw/refs/heads/main/holiday_road.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
-
     <!-- Main content container -->
     <div id="content">
       <!-- Heading -->
@@ -43,6 +37,18 @@
     </div>
 
     <!-- External JavaScript -->
+    <script>
+      // Create a new Audio object
+      const audio = new Audio("https://github.com/ElBogano/elbogano.github.io/raw/refs/heads/main/holiday_road.mp3");
+
+      // Set the audio to loop
+      audio.loop = true;
+
+      // Attempt to autoplay the audio
+      audio.play().catch((error) => {
+        console.error("Autoplay failed:", error);
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
